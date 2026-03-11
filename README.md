@@ -1,6 +1,6 @@
 # 👨‍💻 Sugeshan S
 
-![Profile Views](https://komarev.com/ghpvc/?username=YOUR_GITHUB_USERNAME\&color=blue)
+![Profile Views](https://komarev.com/ghpvc/?username=Sugeshan19\&color=blue)
 
 🎓 Computer Science Student | 💻 Aspiring Software Developer | 🎨 UI/UX Designer
 
@@ -89,9 +89,9 @@ Chennai, Tamil Nadu, India
 
 # 📊 GitHub Stats
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME\&show_icons=true)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Sugeshan19\&show_icons=true)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME\&layout=compact)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Sugeshan19\&layout=compact)
 
 ---
 
