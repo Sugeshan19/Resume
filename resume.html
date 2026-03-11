@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugeshan S | Resume</title>
+    <meta name="description" content="Sugeshan S - Front-End focused software developer portfolio resume featuring skills, experience, projects, and education.">
+    <meta name="keywords" content="Sugeshan S, Front-End Developer, React, MERN Stack, Resume, Portfolio">
+    <meta name="author" content="Sugeshan S">
+    <meta property="og:title" content="Sugeshan S | Resume">
+    <meta property="og:description" content="Front-End focused software developer with internship experience in React and MERN stack.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0d1b2a">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' rx='18' fill='%230d1b2a'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='42' fill='white'%3ESS%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --surface-muted: #f1f5f9;
+            --text: #102a43;
+            --text-muted: #52606d;
+            --accent: #0b5cab;
+            --accent-strong: #084b8a;
+            --line: #d9e2ec;
+            --shadow: 0 10px 30px rgba(16, 42, 67, 0.08);
+            --radius: 14px;
+            --radius-sm: 10px;
+            --container: min(1080px, calc(100% - 2.5rem));
+            --nav-height: 72px;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: calc(var(--nav-height) + 16px);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text);
+            background: linear-gradient(180deg, #f8fbff 0%, var(--bg) 45%, #f4f7fb 100%);
+            line-height: 1.65;
+            font-size: 15.5px;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.25s ease;
+        }
+
+        a:hover,
+        a:focus-visible {
+            color: var(--accent-strong);
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+        }
+
+        .skip-link:focus {
+            left: 1rem;
+            top: 1rem;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 0.5rem 0.75rem;
+            z-index: 1000;
+        }
+
+        .container {
+            width: var(--container);
+            margin-inline: auto;
+        }
+
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.9);
+            border-bottom: 1px solid rgba(217, 226, 236, 0.9);
+        }
+
+        .nav-inner {
+            height: var(--nav-height);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .brand {
+            font-weight: 800;
+            letter-spacing: 0.3px;
+            color: #0d1b2a;
+            font-size: 1.02rem;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 0.35rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            padding: 0.45rem 0.65rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
+            color: var(--accent);
+            background: #eaf2fb;
+        }
+
+        .hero {
+            padding: 3.5rem 0 2.25rem;
+        }
+
+        .hero-card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: calc(var(--radius) + 2px);
+            box-shadow: var(--shadow);
+            padding: clamp(1.4rem, 3vw, 2.2rem);
+        }
+
+        .hero-top {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 0.7rem;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(1.9rem, 4vw, 2.7rem);
+            line-height: 1.2;
+            letter-spacing: 0.4px;
+            color: #0d1b2a;
+        }
+
+        .hero-title {
+            margin: 0;
+            font-size: 1.03rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .hero-summary {
+            margin: 0.95rem 0 1.25rem;
+            color: #334e68;
+            max-width: 72ch;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            padding: 0.64rem 0.9rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #ffffff;
+            box-shadow: 0 8px 18px rgba(11, 92, 171, 0.2);
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus-visible {
+            background: var(--accent-strong);
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        .btn-ghost {
+            border-color: var(--line);
+            background: #ffffff;
+            color: var(--text);
+        }
+
+        .btn-ghost:hover,
+        .btn-ghost:focus-visible {
+            border-color: #bed0e3;
+            background: #f8fbff;
+            transform: translateY(-1px);
+        }
+
+        .contact-row {
+            margin-top: 1.25rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+        }
+
+        .contact-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            background: var(--surface-muted);
+            border: 1px solid #d5e0eb;
+            color: #334e68;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            padding: 0.4rem 0.75rem;
+            transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+        }
+
+        .contact-chip:hover,
+        .contact-chip:focus-visible {
+            background: #eaf2fb;
+            border-color: #b8cde3;
+            transform: translateY(-1px);
+        }
+
+        main {
+            padding-bottom: 2.4rem;
+        }
+
+        .section {
+            padding: 1.05rem 0 0.85rem;
+        }
+
+        .section + .section {
+            border-top: 1px solid #dbe6f1;
+            margin-top: 1.2rem;
+            padding-top: 1.8rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            margin: 0;
+            font-size: 1.06rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #17324d;
+        }
+
+        .section-line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, #bfd2e6 0%, #d9e2ec 100%);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 1rem 1rem 0.9rem;
+            box-shadow: 0 8px 20px rgba(16, 42, 67, 0.05);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: #bfd2e6;
+            box-shadow: 0 12px 24px rgba(16, 42, 67, 0.08);
+        }
+
+        .about-card p,
+        .education-card p {
+            margin: 0;
+            color: #334e68;
+        }
+
+        .skills-card h3 {
+            margin: 0 0 0.7rem;
+            font-size: 0.97rem;
+            color: #1a3a5b;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+        }
+
+        .tag {
+            padding: 0.38rem 0.65rem;
+            border-radius: 999px;
+            font-size: 0.83rem;
+            font-weight: 500;
+            background: #edf4fc;
+            border: 1px solid #c8d9eb;
+            color: #214363;
+        }
+
+        .timeline {
+            position: relative;
+            display: grid;
+            gap: 0.85rem;
+            padding-left: 1.15rem;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 0.35rem;
+            top: 0.3rem;
+            bottom: 0.3rem;
+            width: 2px;
+            background: #c4d7eb;
+        }
+
+        .experience-card {
+            position: relative;
+        }
+
+        .experience-card::before {
+            content: "";
+            position: absolute;
+            left: -1.03rem;
+            top: 1.1rem;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 0 4px #e5eef8;
+        }
+
+        .job-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 0.7rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .role {
+            margin: 0;
+            font-size: 1rem;
+            color: #17324d;
+        }
+
+        .date {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        ul {
+            margin: 0.48rem 0 0;
+            padding-left: 1.15rem;
+        }
+
+        li {
+            margin-bottom: 0.33rem;
+            color: #334e68;
+        }
+
+        .project-card .project-title {
+            margin: 0;
+            font-size: 1rem;
+            color: #17324d;
+        }
+
+        .project-actions {
+            margin-top: 0.75rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        .project-actions .btn {
+            font-size: 0.85rem;
+            padding: 0.5rem 0.8rem;
+        }
+
+        .contact-panel {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.9rem;
+        }
+
+        .contact-card {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-sm);
+            padding: 0.82rem 0.95rem;
+            color: #334e68;
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .contact-card:hover,
+        .contact-card:focus-visible {
+            transform: translateY(-1px);
+            border-color: #bfd2e6;
+            box-shadow: 0 8px 18px rgba(16, 42, 67, 0.08);
+        }
+
+        .contact-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 9px;
+            display: grid;
+            place-items: center;
+            background: #eaf2fb;
+            color: #1f4f80;
+            flex-shrink: 0;
+        }
+
+        .contact-meta strong {
+            display: block;
+            font-size: 0.92rem;
+            color: #17324d;
+        }
+
+        .contact-meta span {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+        }
+
+        footer {
+            border-top: 1px solid var(--line);
+            margin-top: 2.2rem;
+            padding: 1.1rem 0 1.8rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.55s ease, transform 0.55s ease;
+        }
+
+        .reveal.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 920px) {
+            .card-grid,
+            .contact-panel {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-inner {
+                height: auto;
+                min-height: var(--nav-height);
+                padding: 0.6rem 0;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .nav-links {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 700px) {
+            :root {
+                --container: min(1080px, calc(100% - 1.25rem));
+            }
+
+            body {
+                font-size: 14.6px;
+            }
+
+            .hero {
+                padding-top: 2.4rem;
+            }
+
+            .job-header {
+                flex-direction: column;
+                gap: 0.15rem;
+            }
+
+            .date {
+                white-space: normal;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .hero-actions {
+                width: 100%;
+            }
+        }
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 8mm;
+            }
+
+            .site-nav,
+            .hero-actions,
+            footer {
+                display: none;
+            }
+
+            body {
+                background: #fff;
+                font-size: 9.3pt;
+                line-height: 1.25;
+                color: #111;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .hero,
+            .section {
+                padding: 0.14rem 0;
+            }
+
+            .hero-card {
+                padding: 0.38rem 0.45rem;
+                border-radius: 0;
+            }
+
+            h1 {
+                font-size: 18pt;
+                line-height: 1.1;
+            }
+
+            .hero-title {
+                font-size: 9.3pt;
+            }
+
+            .hero-summary {
+                margin: 0.18rem 0 0.34rem;
+                max-width: none;
+            }
+
+            .contact-row {
+                margin-top: 0.22rem;
+                gap: 0.22rem;
+            }
+
+            .contact-chip {
+                font-size: 8.2pt;
+                padding: 0.12rem 0.34rem;
+                border-color: #d8d8d8;
+                background: transparent;
+            }
+
+            #about {
+                display: none;
+            }
+
+            main {
+                padding-bottom: 0;
+            }
+
+            .section + .section {
+                margin-top: 0.15rem;
+                padding-top: 0.22rem;
+                border-top-color: #e5e5e5;
+            }
+
+            .section-header {
+                margin-bottom: 0.25rem;
+                gap: 0.3rem;
+            }
+
+            .section-title {
+                font-size: 9pt;
+                letter-spacing: 0.5px;
+            }
+
+            .section-line {
+                opacity: 0.45;
+            }
+
+            .card-grid {
+                gap: 0.28rem;
+            }
+
+            .hero-card,
+            .card,
+            .contact-card {
+                border: 1px solid #ddd;
+                box-shadow: none;
+            }
+
+            .card {
+                padding: 0.36rem 0.46rem;
+                border-radius: 0;
+            }
+
+            .skills-card h3,
+            .role,
+            .project-card .project-title {
+                font-size: 8.8pt;
+                margin-bottom: 0.1rem;
+            }
+
+            .tag-list {
+                gap: 0.2rem;
+            }
+
+            .tag {
+                font-size: 7.6pt;
+                padding: 0.08rem 0.28rem;
+                border-radius: 999px;
+                border-color: #d6d6d6;
+                background: transparent;
+            }
+
+            .timeline {
+                gap: 0.2rem;
+                padding-left: 0;
+            }
+
+            .timeline::before,
+            .experience-card::before {
+                display: none;
+            }
+
+            .job-header {
+                margin-bottom: 0.1rem;
+                gap: 0.25rem;
+            }
+
+            .date {
+                font-size: 8pt;
+            }
+
+            ul {
+                margin-top: 0.16rem;
+                padding-left: 0.78rem;
+            }
+
+            li {
+                margin-bottom: 0.08rem;
+                font-size: 8.15pt;
+            }
+
+            .project-actions {
+                margin-top: 0.22rem;
+                gap: 0.22rem;
+            }
+
+            .project-actions .btn {
+                font-size: 7.7pt;
+                padding: 0.12rem 0.36rem;
+                border-radius: 3px;
+                box-shadow: none;
+            }
+
+            .contact-panel {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 0.2rem;
+            }
+
+            .contact-card {
+                gap: 0.24rem;
+                padding: 0.16rem 0.32rem;
+                border-radius: 3px;
+            }
+
+            .contact-icon {
+                width: 16px;
+                height: 16px;
+                border-radius: 3px;
+                font-size: 7pt;
+                background: transparent;
+            }
+
+            .contact-meta strong,
+            .contact-meta span {
+                font-size: 7.5pt;
+                line-height: 1.1;
+            }
+
+            .contact-meta strong {
+                margin-bottom: 0.02rem;
+            }
+
+            i[class*="fa-"] {
+                font-size: 0.78em;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <nav class="site-nav" aria-label="Primary">
+        <div class="container nav-inner">
+            <div class="brand">Sugeshan S</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <section class="hero-card reveal" aria-labelledby="hero-name">
+                <div class="hero-top">
+                    <div>
+                        <h1 id="hero-name">Sugeshan S</h1>
+                        <p class="hero-title">Fullstack Developer</p>
+                    </div>
+                </div>
+
+                <p class="hero-summary">Dynamic fullstack developer with internship experience in crafting responsive web applications using React and the MERN stack.
+                    Possesses a solid foundation in developing reusable UI components, integrating REST APIs, and thriving in Agile team environments through Git-based workflows.
+                    Committed to delivering clean code and user-centric designs that enhance product reliability and performance. 
+                    Eager to contribute innovative solutions that drive project success and elevate user experiences.</p>
+
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="resume.pdf" download aria-label="Download resume as PDF">
+                        <i class="fa-solid fa-download" aria-hidden="true"></i>
+                        Download Resume
+                    </a>
+                    <a class="btn btn-ghost" href="#contact" aria-label="Go to contact section">
+                        <i class="fa-regular fa-address-card" aria-hidden="true"></i>
+                        Contact Me
+                    </a>
+                </div>
+
+                <div class="contact-row" aria-label="Primary contact links">
+                    <span class="contact-chip"><i class="fa-solid fa-phone"></i> +91 6382111702</span>
+                    <a class="contact-chip" href="mailto:sugeshansenthilv@gmail.com"><i class="fa-solid fa-envelope"></i> sugeshansenthilv@gmail.com</a>
+                    <a class="contact-chip" href="https://github.com/Sugeshan19" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> github.com/Sugeshan19</a>
+                    <a class="contact-chip" href="https://www.linkedin.com/in/sugeshan-s" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/sugeshan-s</a>
+                    <a class="contact-chip" href="https://sugeshan-s.vercel.app" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-globe"></i> sugeshan-s.vercel.app</a>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <main id="main-content" class="container">
+        <section id="about" class="section reveal" aria-labelledby="about-title">
+            <div class="section-header">
+                <h2 id="about-title" class="section-title">About / Summary</h2>
+                <span class="section-line" aria-hidden="true"></span>
+            </div>
+            <article class="card about-card">
+                <p>I’m a passionate Computer Science and Engineering undergraduate with a strong curiosity for solving real-world problems through technology. Currently exploring web development (React, Node.js, MongoDB) and building projects ranging from e-commerce platforms to social impact solutions like emergency volunteer alert systems.
+                    <br>⚡ I enjoy working on:
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;development with React.js & Tailwind
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Backend development with Node.js & Express
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Databases like MongoDB
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Problem-solving through hackathons & team projects
+                    <br>🌱 As a engineering student, I’m constantly learning and experimenting with new technologies, while sharing my journey through projects and collaborations.
+                    <br>🚀 My future goal is to grow as a full-stack developer and contribute to impactful innovations in tech that make life simpler and safer.
+                    <br>🤝 Always open to connecting with fellow learners, developers, and mentors to exchange ideas and collaborate!</p>
+            </article>
+        </section>
+
+        <section id="skills" class="section reveal" aria-labelledby="skills-title">
+            <div class="section-header">
+                <h2 id="skills-title" class="section-title">Skills</h2>
+                <span class="section-line" aria-hidden="true"></span>
+            </div>
+            <div class="card-grid">
+                <article class="card skills-card">
+                    <h3><i class="fa-solid fa-code" aria-hidden="true"></i> Languages</h3>
+                    <div class="tag-list">
+                        <span class="tag">JavaScript (ES6+)</span>
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </article>
+                <article class="card skills-card">
+                    <h3><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Frameworks</h3>
+                    <div class="tag-list">
+                        <span class="tag">React</span>
+                        <span class="tag">Angular</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Express.js</span>
+                    </div>
+                </article>
+                <article class="card skills-card">
+                    <h3><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Tools</h3>
+                    <div class="tag-list">
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">REST APIs</span>
+                        <span class="tag">Git/GitHub</span>
+                        <span class="tag">Vercel</span>
+                        <span class="tag">Figma</span>
+                    </div>
+                </article>
+                <article class="card skills-card">
+                    <h3><i class="fa-solid fa-brain" aria-hidden="true"></i> Core Strengths</h3>
+                    <div class="tag-list">
+                        <span class="tag">Problem Solving</span>
+                        <span class="tag">Agile Workflow</span>
+                        <span class="tag">UI/UX Collaboration</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="experience" class="section reveal" aria-labelledby="experience-title">
+            <div class="section-header">
+                <h2 id="experience-title" class="section-title">Experience</h2>
+                <span class="section-line" aria-hidden="true"></span>
+            </div>
+
+            <div class="timeline">
+                <article class="card experience-card">
+                    <div class="job-header">
+                        <h3 class="role">Full Stack Developer Intern | Wipro</h3>
+                        <span class="date">07/2025 – 08/2025</span>
+                    </div>
+                    <ul>
+                        <li>Developed full-stack features using the MERN stack, improving end-to-end data flow between UI and backend services.</li>
+                        <li>Optimized front-end components and database queries to improve responsiveness and overall application performance.</li>
+                        <li>Contributed within Agile sprints and maintained collaborative code quality through Git-based version control.</li>
+                    </ul>
+                </article>
+
+                <article class="card experience-card">
+                    <div class="job-header">
+                        <h3 class="role">React Developer Intern | SPARK Solutions</h3>
+                        <span class="date">03/2025 – 04/2025</span>
+                    </div>
+                    <ul>
+                        <li>Built responsive and accessible interfaces in React with reusable, maintainable component structure.</li>
+                        <li>Integrated REST APIs for dynamic content rendering and improved front-end efficiency through targeted optimizations.</li>
+                        <li>Worked closely with senior developers to apply production-grade coding and review practices.</li>
+                    </ul>
+                </article>
+
+                <article class="card experience-card">
+                    <div class="job-header">
+                        <h3 class="role">Web Developer Intern | Rinex.AI</h3>
+                        <span class="date">01/2025 – 03/2025</span>
+                    </div>
+                    <ul>
+                        <li>Designed and implemented responsive web pages using modern CSS and layout best practices.</li>
+                        <li>Supported front-end workflow improvements and UI refinements to enhance consistency and usability.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="section reveal" aria-labelledby="projects-title">
+            <div class="section-header">
+                <h2 id="projects-title" class="section-title">Projects</h2>
+                <span class="section-line" aria-hidden="true"></span>
+            </div>
+
+            <article class="card project-card">
+                <h3 class="project-title">Yuva Club Website | MERN Stack</h3>
+                <ul>
+                    <li>Developed a responsive platform supporting member registration and event management workflows for a student club.</li>
+                </ul>
+                <div class="project-actions">
+                    <a class="btn btn-primary" href="https://yuva-web.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open Yuva Club Website live demo">
+                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        Live Demo
+                    </a>
+                    <a class="btn btn-ghost" href="https://github.com/Sugeshan19/yuva-web" target="_blank" rel="noopener noreferrer" aria-label="Open Yuva Club Website GitHub repository">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        GitHub
+                    </a>
+                </div>
+            </article>
+        </section>
+
+        <section id="education" class="section reveal" aria-labelledby="education-title">
+            <div class="section-header">
+                <h2 id="education-title" class="section-title">Education</h2>
+                <span class="section-line" aria-hidden="true"></span>
+            </div>
+            <article class="card education-card">
+                <div class="job-header">
+                    <h3 class="role">B.E. Computer Science Engineering | Saveetha Engineering College</h3>
+                    <span class="date">Expected 01/2028</span>
+                </div>
+                <p>GPA: 7.98 
+                    <br> member, Coder’s Club and Tech Society.
+                    <br>Branding Ambassador , Yuva Club
+                </p>
+            </article>
+        </section>
+
+        <section id="contact" class="section reveal" aria-labelledby="contact-title">
+            <div class="section-header">
+                <h2 id="contact-title" class="section-title">Contact</h2>
+                <span class="section-line" aria-hidden="true"></span>
+            </div>
+
+            <div class="contact-panel">
+                <a class="contact-card" href="tel:+916382111702">
+                    <span class="contact-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+                    <span class="contact-meta">
+                        <strong>Phone</strong>
+                        <span>+91 6382111702</span>
+                    </span>
+                </a>
+                <a class="contact-card" href="mailto:sugeshansenthilv@gmail.com">
+                    <span class="contact-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+                    <span class="contact-meta">
+                        <strong>Email</strong>
+                        <span>sugeshansenthilv@gmail.com</span>
+                    </span>
+                </a>
+                <a class="contact-card" href="https://github.com/Sugeshan19" target="_blank" rel="noopener noreferrer">
+                    <span class="contact-icon"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+                    <span class="contact-meta">
+                        <strong>GitHub</strong>
+                        <span>github.com/Sugeshan19</span>
+                    </span>
+                </a>
+                <a class="contact-card" href="https://www.linkedin.com/in/sugeshan-s" target="_blank" rel="noopener noreferrer">
+                    <span class="contact-icon"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></span>
+                    <span class="contact-meta">
+                        <strong>LinkedIn</strong>
+                        <span>linkedin.com/in/sugeshan-s</span>
+                    </span>
+                </a>
+                <a class="contact-card" href="https://sugeshan-s.vercel.app" target="_blank" rel="noopener noreferrer">
+                    <span class="contact-icon"><i class="fa-solid fa-globe" aria-hidden="true"></i></span>
+                    <span class="contact-meta">
+                        <strong>Portfolio</strong>
+                        <span>sugeshan-s.vercel.app</span>
+                    </span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">© 2026 Sugeshan S • Built with semantic HTML, modern CSS, and performance-first design.</div>
+    </footer>
+
+    <script>
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.14 }
+        );
+        revealElements.forEach((element) => revealObserver.observe(element));
+    </script>
+</body>
+</html>
