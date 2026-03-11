@@ -85,19 +85,11 @@ Designed multiple UI systems using **Figma**, including:
 Saveetha Engineering College
 Chennai, Tamil Nadu, India
 
----
 
-# 📊 GitHub Stats
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Sugeshan19\&show_icons=true)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Sugeshan19\&layout=compact)
-
----
 
 # 📫 Contact
 
-📧 Email: [your-email@example.com](mailto:sugeshansenthilv@gmail.com)
+📧 Email: [sugeshansenthilv@gmail.com](mailto:sugeshansenthilv@gmail.com)
 
 💼 LinkedIn: https://linkedin.com/in/Sugeshan-s
 
